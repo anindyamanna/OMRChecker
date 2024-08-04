@@ -25,8 +25,16 @@ ERROR_CODES = DotMap(
 
 FIELD_TYPES = {
     "QTYPE_INT": {
-        "bubbleValues": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        "bubbleValues": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
         "direction": "vertical",
+    },
+    "QTYPE_INT_H": {
+        "bubbleValues": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+        "direction": "horizontal",
+    },
+    "QTYPE_INT_H_ALPHA": {
+        "bubbleValues": ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+        "direction": "horizontal",
     },
     "QTYPE_INT_FROM_1": {
         "bubbleValues": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],

@@ -5,9 +5,9 @@ Credits: https://www.learnopencv.com/image-alignment-feature-based-using-opencv-
 import cv2
 import numpy as np
 
-from src.processors.interfaces.ImagePreprocessor import ImagePreprocessor
-from src.utils.image import ImageUtils
-from src.utils.interaction import InteractionUtils
+from OMRChecker.src.processors.interfaces.ImagePreprocessor import ImagePreprocessor
+from OMRChecker.src.utils.image import ImageUtils
+from OMRChecker.src.utils.interaction import InteractionUtils
 
 
 class FeatureBasedAlignment(ImagePreprocessor):

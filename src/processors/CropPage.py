@@ -4,10 +4,10 @@ https://www.pyimagesearch.com/2015/04/06/zero-parameter-automatic-canny-edge-det
 import cv2
 import numpy as np
 
-from src.logger import logger
-from src.processors.interfaces.ImagePreprocessor import ImagePreprocessor
-from src.utils.image import ImageUtils
-from src.utils.interaction import InteractionUtils
+from OMRChecker.src.logger import logger
+from OMRChecker.src.processors.interfaces.ImagePreprocessor import ImagePreprocessor
+from OMRChecker.src.utils.image import ImageUtils
+from OMRChecker.src.utils.interaction import InteractionUtils
 
 MIN_PAGE_AREA = 80000
 

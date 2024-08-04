@@ -11,8 +11,8 @@ import argparse
 import sys
 from pathlib import Path
 
-from src.entry import entry_point
-from src.logger import logger
+from OMRChecker.src.entry import entry_point
+from OMRChecker.src.logger import logger
 
 
 def parse_args():

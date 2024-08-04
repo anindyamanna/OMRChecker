@@ -5,11 +5,11 @@ from fractions import Fraction
 from deepmerge import Merger
 from dotmap import DotMap
 
-from src.constants import FIELD_LABEL_NUMBER_REGEX
-from src.defaults import CONFIG_DEFAULTS, TEMPLATE_DEFAULTS
-from src.schemas.constants import FIELD_STRING_REGEX_GROUPS
-from src.utils.file import load_json
-from src.utils.validations import (
+from OMRChecker.src.constants import FIELD_LABEL_NUMBER_REGEX
+from OMRChecker.src.defaults import CONFIG_DEFAULTS, TEMPLATE_DEFAULTS
+from OMRChecker.src.schemas.constants import FIELD_STRING_REGEX_GROUPS
+from OMRChecker.src.utils.file import load_json
+from OMRChecker.src.utils.validations import (
     validate_config_json,
     validate_evaluation_json,
     validate_template_json,
@@ -37,6 +37,8 @@ def get_concatenated_response(omr_response, template):
     concatenated_response = {}
     for field_label, concatenate_keys in template.custom_labels.items():
         custom_label = "".join([omr_response[k] for k in concatenate_keys])
+        for k in concatenate_keys:
+            del omr_response[k]
         concatenated_response[field_label] = custom_label
 
     for field_label in template.non_custom_labels:

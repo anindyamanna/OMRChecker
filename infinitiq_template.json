@@ -1,0 +1,86 @@
+{
+  "pageDimensions": [
+    1550,
+    2000
+  ],
+  "bubbleDimensions": [
+    40,
+    40
+  ],
+  "fieldBlocks": {
+    "TestNumber": {
+      "fieldType": "QTYPE_INT",
+      "origin": [ 100, 406 ],
+      "fieldLabels": ["num1..8"],
+      "bubblesGap": 35.5,
+      "labelsGap": 50
+    },
+    "RollNumber": {
+      "fieldType": "QTYPE_INT_H",
+      "origin": [ 825, 406 ],
+      "fieldLabels": ["roll1..2"],
+      "bubblesGap": 36.8,
+      "labelsGap": 50
+    },
+    "BookletCode": {
+      "fieldType": "QTYPE_INT_H_ALPHA",
+      "origin": [ 555, 578 ],
+      "fieldLabels": ["code1..4"],
+      "bubblesGap": 34.3,
+      "labelsGap": 50
+    },
+    "MCQ_ROW_1": {
+      "fieldType": "QTYPE_MCQ4",
+      "origin": [ 156, 868 ],
+      "fieldLabels": ["q1..25"],
+      "bubblesGap": 48,
+      "labelsGap": 38.8,
+      "mergedFieldName": "MCQ_Answers"
+    },
+    "MCQ_ROW_2": {
+      "fieldType": "QTYPE_MCQ4",
+      "origin": [ 466, 868 ],
+      "fieldLabels": ["q26..50"],
+      "bubblesGap": 48,
+      "labelsGap": 38.8,
+      "mergedFieldName": "MCQ_Answers"
+    },
+    "MCQ_ROW_3": {
+      "fieldType": "QTYPE_MCQ4",
+      "origin": [ 776, 868 ],
+      "fieldLabels": ["q51..75"],
+      "bubblesGap": 48,
+      "labelsGap": 38.8,
+      "mergedFieldName": "MCQ_Answers"
+    },
+    "Descriptive": {
+      "fieldType": "QTYPE_INT_H",
+      "origin": [ 1060, 1055 ],
+      "fieldLabels": ["desc_q_1..20"],
+      "bubblesGap": 37,
+      "labelsGap": 38.5
+    }
+  },
+  "customLabels": {
+    "RollNumber": [
+      "roll1..2"
+    ],
+    "TestNumber": [
+      "num1..8"
+    ],
+    "BookletCode": [
+      "code1..4"
+    ]
+  },
+  "preProcessors": [
+    {
+      "name": "CropPage",
+      "options": {
+        "morphKernel": [
+          10,
+          10
+        ]
+      }
+    }
+  ]
+}

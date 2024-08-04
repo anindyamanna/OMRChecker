@@ -3,11 +3,11 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.tests.test_samples.sample2.boilerplate import (
+from OMRChecker.src.tests.test_samples.sample2.boilerplate import (
     CONFIG_BOILERPLATE,
     TEMPLATE_BOILERPLATE,
 )
-from src.tests.utils import (
+from OMRChecker.src.tests.utils import (
     generate_write_jsons_and_run,
     remove_file,
     run_entry_point,

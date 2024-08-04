@@ -6,11 +6,11 @@
  Github: https://github.com/Udayraj123
 
 """
-from src.constants import FIELD_TYPES
-from src.core import ImageInstanceOps
-from src.logger import logger
-from src.processors.manager import PROCESSOR_MANAGER
-from src.utils.parsing import (
+from OMRChecker.src.constants import FIELD_TYPES
+from OMRChecker.src.core import ImageInstanceOps
+from OMRChecker.src.logger import logger
+from OMRChecker.src.processors.manager import PROCESSOR_MANAGER
+from OMRChecker.src.utils.parsing import (
     custom_sort_output_columns,
     open_template_with_defaults,
     parse_fields,
@@ -196,10 +196,10 @@ class Template:
         )
 
         if (
-            block_end_x >= page_width
-            or block_end_y >= page_height
-            or block_start_x < 0
-            or block_start_y < 0
+                block_end_x >= page_width
+                or block_end_y >= page_height
+                or block_start_x < 0
+                or block_start_y < 0
         ):
             raise Exception(
                 f"Overflowing field block '{block_name}' with origin {block_instance.origin} and dimensions {block_instance.dimensions} in template with dimensions {self.page_dimensions}"
@@ -227,6 +227,7 @@ class FieldBlock:
             labels_gap,
             origin,
             self.empty_val,
+            self.merged_field_name
         ) = map(
             field_block_object.get,
             [
@@ -239,6 +240,7 @@ class FieldBlock:
                 "labelsGap",
                 "origin",
                 "emptyValue",
+                "mergedFieldName",
             ],
         )
         self.parsed_field_labels = parse_fields(
@@ -262,12 +264,12 @@ class FieldBlock:
         )
 
     def calculate_block_dimensions(
-        self,
-        bubble_dimensions,
-        bubble_values,
-        bubbles_gap,
-        direction,
-        labels_gap,
+            self,
+            bubble_dimensions,
+            bubble_values,
+            bubbles_gap,
+            direction,
+            labels_gap,
     ):
         _h, _v = (1, 0) if (direction == "vertical") else (0, 1)
 
@@ -284,12 +286,12 @@ class FieldBlock:
         )
 
     def generate_bubble_grid(
-        self,
-        bubble_values,
-        bubbles_gap,
-        direction,
-        field_type,
-        labels_gap,
+            self,
+            bubble_values,
+            bubbles_gap,
+            direction,
+            field_type,
+            labels_gap,
     ):
         _h, _v = (1, 0) if (direction == "vertical") else (0, 1)
         self.traverse_bubbles = []

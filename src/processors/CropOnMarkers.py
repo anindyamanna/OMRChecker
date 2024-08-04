@@ -3,10 +3,10 @@ import os
 import cv2
 import numpy as np
 
-from src.logger import logger
-from src.processors.interfaces.ImagePreprocessor import ImagePreprocessor
-from src.utils.image import ImageUtils
-from src.utils.interaction import InteractionUtils
+from OMRChecker.src.logger import logger
+from OMRChecker.src.processors.interfaces.ImagePreprocessor import ImagePreprocessor
+from OMRChecker.src.utils.image import ImageUtils
+from OMRChecker.src.utils.interaction import InteractionUtils
 
 
 class CropOnMarkers(ImagePreprocessor):
